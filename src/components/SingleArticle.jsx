@@ -7,8 +7,6 @@ import axios from "axios";
 import Ad from "./Ad";
 import mercedesImg from "../images/mercedesAd.jpg";
 import PremiumBlocker from "./PremiumBlocker";
-import { useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import ScrollArrow from "./ScrollArrow";
 import ArticleCard from './ArticleCard'
 import "../css/article.css";
