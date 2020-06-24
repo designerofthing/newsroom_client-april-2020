@@ -1,5 +1,6 @@
  [![Build Status](https://semaphoreci.com/api/v1/jysmys/newsroom_client-april-2020/branches/development/badge.svg)](https://semaphoreci.com/jysmys/newsroom_client-april-2020)
 
+![Daily News Sense](https://github.com/designerofthing/newsroom_client-april-2020/blob/development/src/images/DailyNewsSense.png)
 
 # News App Public Client -  Daily News Sense
 
@@ -13,7 +14,7 @@ It is one of 4 applications created in a 3 week project, the others being:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 The project also uses [SemanticUI](https://semantic-ui.com/) mixed with custom CSS for styling.  
-[Redux](https://redux.js.org/) was employed for state management, [J-Tock Auth(https://github.com/Eth3rnit3/j-tockauth)] and [Devise](https://github.com/heartcombo/devise#the-devise-wiki) for authorisation, [I18n](https://www.i18next.com/) for translation. 
+[Redux](https://redux.js.org/) was employed for state management, [J-Tock Auth](https://github.com/Eth3rnit3/j-tockauth) and [Devise](https://github.com/heartcombo/devise#the-devise-wiki) for authorisation, [I18n](https://www.i18next.com/) for translation. 
 
 
 The application's features are tested using Cypress.
