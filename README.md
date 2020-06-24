@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [![Build Status](https://semaphoreci.com/api/v1/jysmys/newsroom_client-april-2020/branches/development/badge.svg)](https://semaphoreci.com/jysmys/newsroom_client-april-2020)
 
-## Available Scripts
 
-In the project directory, you can run:
+# News App Public Client -  Daily News Sense
 
-### `yarn start`
+## About this project
+This is the public facing application of a World News site, deliverable in 2 languages with geolocation services for local news and weather.  
+It is one of 4 applications created in a 3 week project, the others being:   
+[Daily News Sense - Mobile Client](https://github.com/designerofthing/newsroom_mobile-april-2020)   
+[Daily News Sense - Staff Client](https://github.com/designerofthing/newsroom_staff-april-2020)   
+[Daily News Sense - API](https://github.com/designerofthing/newsroom_api-april-2020) 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+The project also uses [SemanticUI](https://semantic-ui.com/) mixed with custom CSS for styling.  
+[Redux](https://redux.js.org/) was employed for state management, [J-Tock Auth(https://github.com/Eth3rnit3/j-tockauth)] and [Devise](https://github.com/heartcombo/devise#the-devise-wiki) for authorisation, [I18n](https://www.i18next.com/) for translation. 
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application's features are tested using Cypress.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was a collaboration between the 6 members of the Craft Academy Bootcamp April 2020 Cohort:  
+https://github.com/kermit-klein  
+https://github.com/erikbjoern  
+https://github.com/jysmys  
+https://github.com/ViaMarcus  
+https://github.com/PaulineBA  
+https://github.com/designerofthing.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Dependencies
+To run locally you will need to install the packages in the package.json using a package manager for JavaScript.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Deployment
+### Online
+https://dailynewssense.netlify.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Instructions for local deployment
+To deploy locally, clone the repository and install packages using your package manager, then run:
+#### `yarn start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the app in the development mode.  
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
+It requires the API to run on concurrently.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Acknowledgements:
+Built with the guidance of the Craft Academy coaches and documentation, Reactjs.org, Semanticui.com and Stackoverflow.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This application consumes the [Open Weather API](https://openweathermap.org/)  
 
-## Learn More
+## Improvements
+- rating system for articles
+- improved styling
+- OAuth authentication via Facebook and Google
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+This app is open source software [licensed as MIT](https://mit-license.org/).
