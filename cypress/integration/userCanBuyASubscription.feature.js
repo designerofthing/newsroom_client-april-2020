@@ -1,12 +1,6 @@
 describe("User can purchase a subscription on the subscribe page", () => {
   beforeEach(() => {
-    cy.server();
-    cy.route({
-      method: "GET",
-      url: "http://localhost:3000/api/articles",
-      response: "fixture:article_list.json",
-    });
-    cy.visit("/");
+    cy.stubMain();
   });
 
   describe("Successfully when logged in", () => {
@@ -16,7 +10,7 @@ describe("User can purchase a subscription on the subscribe page", () => {
         url: "**/subscriptions",
         response: { message: "Transaction was successful" },
       });
-      cy.logIn();
+      cy.logIn("user");
       cy.wait(3000)
       cy.get("#subscription-link").contains("Subscribe").click();
     });
@@ -46,7 +40,7 @@ describe("User can purchase a subscription on the subscribe page", () => {
         response: { message: "There was a problem with your transaction" },
         status: 400,
       });
-      cy.logIn();
+      cy.logIn("user");
       cy.wait(3000);
       cy.get("#subscription-link").contains("Subscribe").click();
       cy.wait(3000);
@@ -61,7 +55,7 @@ describe("User can purchase a subscription on the subscribe page", () => {
     });
 
     it("by entering incomplete data", () => {
-      cy.logIn();
+      cy.logIn("user");
       cy.wait(3000);
       cy.get("#subscription-link").contains("Subscribe").click();
       cy.wait(3000);

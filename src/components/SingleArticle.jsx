@@ -11,15 +11,22 @@ import "../css/article.css";
 import ScrollArrow from "./ScrollArrow";
 import ArticleCard from "./ArticleCard";
 
-const SingleArticle = (props) => {
+const SingleArticle = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const { t } = useTranslation();
-  const article = useSelector((state) => state.articles.activeArticle);
+  const article = useSelector(state => state.articles.activeArticle);
+  const subscriber = useSelector(state => state.auth.subscriber)
 
   const chooseArticle = async () => {
+    let headers = JSON.parse(localStorage.getItem("J-tockAuth-Storage"));
+    headers = {
+      ...headers,
+      "Content-type": "application/json",
+      Accept: "application/json",
+    };
     try {
-      const response = await axios.get(`/articles/${id}`);
+      const response = await axios.get(`/articles/${id}`, { headers: headers });
       dispatch({ type: "SET_ACTIVE_ARTICLE", payload: response.data.article });
     } catch (error) {
       console.log(error);
@@ -33,7 +40,7 @@ const SingleArticle = (props) => {
   return (
     <Container align="center" style={{ paddingTop: "45px", width: "55%" }}>
       <Grid stretched>
-        <ArticleCard article={article} size={2} />
+        <ArticleCard articleProp={article} size={2} />
         <Grid.Row centered>
           <p
             key={article.id}
@@ -51,7 +58,7 @@ const SingleArticle = (props) => {
             className="article-body"
           >
             {article.body}
-            {article.premium && !props.authenticated && <PremiumBlocker />}
+            {article.premium && !subscriber && <PremiumBlocker />}
           </p>
         </Grid.Row>
         <Grid.Row centered>

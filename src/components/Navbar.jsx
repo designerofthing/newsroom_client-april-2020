@@ -5,6 +5,7 @@ import "../css/Navbar.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
+
 const Navbar = () => {
   const activeItem = useSelector((state) => {
     return state.category.selectedCategory;
@@ -12,22 +13,23 @@ const Navbar = () => {
 
   const { t } = useTranslation();
   let categories = [
-    [t("Current"), "Current"],
-    [t("Local"), "Local"],
-    [t("World"), "World"],
-    [t("Politics"), "Politics"],
-    [t("Economy"), "Economy"],
-    [t("Sport"), "Sport"],
-    [t("Entertainment"), "Entertainment"],
-    [t("Other"), "Other"],
+    [t("Current"), "current"],
+    [t("Local"), "local"],
+    [t("World"), "world"],
+    [t("Politics"), "politics"],
+    [t("Economy"), "economy"],
+    [t("Sport"), "sport"],
+    [t("Entertainment"), "entertainment"],
+    [t("Other"), "other"],
   ];
 
   let renderCategories = categories.map((cat) => {
     return (
-      <Menu.Item name={cat[0]} active={activeItem === cat[0].toLowerCase()}>
+      <Menu.Item name={cat[1]} active={activeItem === cat[1]}>
         <NavLink
-          to={`/category/${cat[1].toLowerCase()}`}
+          to={`/category/${cat[1]}`}
           id={cat[1].toLowerCase()}
+          className="cat-btn-text"
         >
           {cat[0]}
         </NavLink>
